@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Remove First and Last Character</title>
+</head>
+
+<body>
+    <p>
+        It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a
+        string.
+        You're given one parameter, the original string.
+        You don't have to worry with strings with less than two characters.
+    </p>
+    <script>
+        console.log("_".repeat(20) + "One" + "_".repeat(20));
+        function removeChar(str) {
+            let strin = str.split("")
+            return strin.slice(1, -1).join("")
+
+        };
+        console.log(removeChar("Amire"));
+        console.log(removeChar("bdrz"));
+        /////////////////////
+        console.log("_".repeat(20) + "Two" + "_".repeat(20));
+        function remove(str) {
+            return str.substring(1, str.length - 1);
+
+        };
+        console.log(remove("Amire"));
+        console.log(remove("bdrz"));
+        ////////////////////////
+
+        console.log("_".repeat(20) + "Three" + "_".repeat(20));
+        function remov(str) {
+            arr = str.split("")
+            arr.shift();
+            arr.pop()
+            return arr.join("")
+
+        };
+        console.log(remov("Amire"));
+        console.log(remov("bdrz"));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Is n divisible by x and y </title>
+</head>
+
+<body>
+    <p>
+        Create a function that checks if a number n is divisible by two numbers x AND y.
+        All inputs are positive, non-zero numbers.
+    </p>
+    <script>
+        function isDivisible(n, x, y) {
+               if (n % x == 0 && n % y == 0) {
+                      return true
+               }
+               return false
+        }
+        console.log(isDivisible(12, 3, 4));
+        console.log(isDivisible(3, 3, 4));
+    </script>
+</body>
+
+</html>
