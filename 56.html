@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'.
+        Return the resulting string.
+
+        Note: input will never be an empty string</p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function fakeBin(x) {
+            return x.split("").map((e) => e < 5 ? 0 : 1).join("")
+        }
+        console.log(fakeBin('45385593107843568'));
+        /////////////////////////
+        console.log("_".repeat(20) + "two" + "_".repeat(20));
+        function fake(x) {
+            return x.replace(/[0-4]/g,"0").replace(/[5-9]/g,'1')
+        }
+        console.log(fake('45385593107843568'));
+     
+    </script>
+</body>
+
+</html>
