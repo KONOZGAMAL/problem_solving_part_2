@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Find numbers which are divisible by given number</title>
+</head>
+
+<body>
+    <p>
+        Complete the function which takes two arguments and returns all numbers which are divisible by the given
+        divisor.
+        First argument is an array of numbers and the second is the divisor.
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function divisibleBy(numbers, divisor) {
+            let arr1 = [];
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] % divisor === 0) {
+                    arr1.push(numbers[i])
+                }
+            }
+            return arr1
+        }
+        console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2));//// [2, 4, 6]
+        console.log("_".repeat(20) + "two" + "_".repeat(20));
+        function divisible(numbers, divisor) {
+            let arr = numbers.filter((e) => {
+                return e % divisor === 0
+            })
+            return arr
+        }
+        console.log(divisible([1, 2, 3, 4, 5, 6], 2));//// [2, 4, 6]
+    </script>
+</body>
+
+</html>

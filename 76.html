@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum The Strings</title>
+</head>
+
+<body>
+    <p>
+        Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+
+        Example: (Input1, Input2 -->Output)
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function sumStr(a, b) {
+            return Number(+a + +b).toString()
+        }
+        console.log(sumStr('123', '456'));///'579'
+        console.log("_".repeat(20) + "two" + "_".repeat(20));
+        function sumSt(a, b) {
+            return String(Number(a) + Number(b))
+        }
+        console.log(sumSt('123', '456'));///'579'
+    </script>
+</body>
+
+</html>

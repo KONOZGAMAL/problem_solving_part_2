@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculate BMI</title>
+</head>
+
+<body>
+    <p>
+        Write function bmi that calculates body mass index (bmi = weight / height2).
+
+        if bmi <= 18.5 return "Underweight" if bmi <=25.0 return "Normal" if bmi <=30.0 return "Overweight" if bmi> 30
+            return "Obese"
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function bmi(weight, height) {
+            let bm = weight / Math.pow(height, 2)
+            if (bm <= 18.5) {
+                return "Underweight"
+            } else if (bm <= 25.0) {
+                return "Normal"
+            } else if (bm <= 25.0) {
+                return "Overweight"
+            } else if (bm > 30) {
+                return "Obese"
+            }
+        }
+        console.log(bmi(80, 1.80));
+        console.log("_".repeat(20) + "two" + "_".repeat(20));
+        function Bmi(weight, height) {
+            let bm = weight / Math.pow(height, 2)
+            return bm <= 18.5 ? "Underweight" : (bm <= 25.0) ? "Normal" : (bm <= 25.0) ? "Overweight" : "Obese";
+        }
+        console.log(Bmi(80, 1.80));
+    </script>
+</body>
+
+</html>

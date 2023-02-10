@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddLength</title>
+</head>
+
+<body>
+    <p>
+        What if we need the length of the words separated by a
+        space to be added at the end of that same word and have it returned as an array?
+    </p>
+    <script>
+        function addLength(str) {
+            return str.split(" ").map((e) => e + " " + e.length)
+        }
+        console.log(addLength("you will win"));
+        console.log(addLength("apple ban"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Mixed Array</title>
+</head>
+
+<body>
+    <p>
+        Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+        Return your answer as a number.
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function sumMix(x) {
+            let count = 0
+            for (let i = 0; i < x.length; i++) {
+                count += parseInt(x[i])
+
+            }
+            return count
+        }
+        console.log(sumMix([9, 3, '7', '3']));
+        ////////////////
+        console.log("_".repeat(20) + "Two" + "_".repeat(20));
+
+        function sum(x) {
+            return x.map((e) => +e).reduce((a, c) => a + c)
+        }
+
+        console.log(sum([9, 3, '7', '3']));
+        ////////////////////////////
+        console.log("_".repeat(20) + "three" + "_".repeat(20));
+
+        function sum1(x) {
+            return x.map((e) => Number(e)).reduce((a, c) => a + c)
+        }
+
+        console.log(sum1([9, 3, '7', '3']));
+
+    </script>
+</body>
+
+</html>

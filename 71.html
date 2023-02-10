@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How good are you really </title>
+</head>
+
+<body>
+    <p>
+        There was a test in your class and you passed it. Congratulations!
+        But you're an ambitious person. You want to know if you're better than the average student in your class.
+
+        You receive an array with your peers' test scores. Now calculate the average and compare your score!
+
+        Return True if you're better, else False!
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function betterThanAverage(classPoints, yourPoints) {
+            let count = 0;
+            for (let i = 0; i < classPoints.length; i++) {
+                count += classPoints[i]
+            }
+            return yourPoints > count / classPoints.length ? true : false
+        }
+        console.log(betterThanAverage([20, 20], 10));
+        console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75));
+        ////////////////////////////////
+        console.log("_".repeat(20) + "two" + "_".repeat(20));
+        function betterThanAver(classPoints, yourPoints) {
+            let newArray = classPoints.reduce((el, current) => {
+                return yourPoints > el + current / classPoints.length ? true : false
+            })
+            return newArray
+        }
+        console.log(betterThanAver([20, 20], 10));
+        console.log(betterThanAver([100, 40, 34, 57, 29, 72, 57, 88], 75));
+
+    </script>
+</body>
+
+</html>
