@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter out the geese</title>
+</head>
+
+<body>
+    <p>
+        Write a function that takes a list of strings as an
+        argument and returns a filtered list containing the same elements but with the 'geese' removed.
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function gooseFilter(birds) {
+            let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+            let ar = birds.filter((e) => {
+                return !(geese.includes(e))
+            })
+            return ar
+
+        };
+        console.log(gooseFilter(["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"]));
+        console.log(gooseFilter(["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]));
+        //////////////////////////
+        console.log("_".repeat(20) + "two" + "_".repeat(20));
+
+        function gooseLoop(birds) {
+            let arr = []
+            let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+            for (let i = 0; i < birds.length; i++) {
+
+                if (!geese.includes(birds[i])) {
+                    arr.push(birds[i])
+                }
+            }
+            return arr
+        };
+        console.log(gooseLoop(["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"]));
+        console.log(gooseLoop(["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]));
+        //////////////////////////////////////////
+        console.log("_".repeat(20) + "three" + "_".repeat(20));
+        const goose = (birds) => {
+            var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+            for (let i = 0; i < birds.length; i++) {
+                for (let j = 0; j < geese.length; j++) {
+                    if (birds[i] == geese[j]) {
+                        birds.splice(i, 1);
+                        i--;
+                    }
+                }
+            }
+            return birds;
+        };
+        console.log(goose(["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"]));
+        console.log(goose(["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]));
+
+    </script>
+</body>
+
+</html>

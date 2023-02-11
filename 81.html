@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> What is between </title>
+</head>
+
+<body>
+    <p>
+        Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between
+            the input parameters, including them. </p>
+            <script>
+                console.log("_".repeat(20) + "one" + "_".repeat(20));
+
+                function between(a, b) {
+                    return Array(b - a + 1).fill(a).map((e, i) => e + i)
+                }
+                console.log(between(1, 5));
+                console.log(between(-2, 5));
+                ////////////////////////
+                console.log("_".repeat(20) + "two" + "_".repeat(20));
+                function between1(a, b) {
+                    let arr = []
+                    for (let i = a; i <= b; i++) {
+                        arr.push(i)
+                    }
+                    return arr
+                }
+                console.log(between1(1, 5));
+                console.log(between1(-2, 5));
+            </script>
+</body>
+
+</html>
