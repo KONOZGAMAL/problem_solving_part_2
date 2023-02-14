@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Count</title>
+</head>
+
+<body>
+    <p>
+        In this little assignment you are given a string of space separated numbers,
+        and have to return the highest and lowest number.
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function highAndLow(numbers) {
+            let num =numbers.split(" ").map((e)=> Number(e))
+            let nu =Math.min(...num)
+            let nu1 =Math.max(...num)
+          
+          return  `${nu} ${nu1}`
+        }
+        console.log(highAndLow("1 2 3 4 5"));
+        console.log(highAndLow("1 9 3 4 -5"));
+
+
+
+    </script>
+</body>
+
+</html>

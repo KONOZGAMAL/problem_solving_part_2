@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Count</title>
+</head>
+
+<body>
+    <p>
+        Return the number (count) of vowels in the given string.
+
+        We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+        The input string will only consist of lower case letters and/or spaces.
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        let arr1 = ['a', 'e', 'i', 'o', 'u']
+        function getCount(str) {
+            let arr = str.split("")
+            let arr2 = []
+            for (let i = 0; i < arr.length; i++) {
+                for (let y = 0; y < arr1.length; y++) {
+                    if (arr[i] == arr1[y]) {
+                        arr2.push(arr[i])
+                    }
+
+                }
+
+            }
+            return arr2.length
+        }
+        console.log(getCount("abracadabra"));
+        ////////////////////////////////////
+        console.log("_".repeat(20) + "two" + "_".repeat(20));
+        function getCount(str) {
+            let Regexp = /[aeiou]/ig
+            return str.match(Regexp).length
+        }
+        console.log(getCount("abracadabra"));
+        /////////////////////
+        console.log("_".repeat(20) + "three" + "_".repeat(20));
+        function getCount1(str) {
+            let Regex = str.split("")
+            return Regex.filter((e) => "aeiou".includes(e)).length
+        }
+        console.log(getCount1("abracadabra"));
+
+    </script>
+</body>
+
+</html>

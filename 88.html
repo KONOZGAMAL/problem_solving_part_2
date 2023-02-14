@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Digit-codewars</title>
+</head>
+
+<body>
+    <p>
+        Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+        For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+        (81-1-1-81)
+    </p>
+    <script>
+        console.log("_".repeat(20)+"one"+"_".repeat(20));
+        function squareDigit(num) {
+               let a=[]
+               let str = num.toString()
+            for (let i = 0; i <str.length; i++) {
+               a.push(str[i] * str[i])
+            }
+            return Number(a.join(""))
+        }
+        console.log(squareDigit(9119));//811181
+        console.log(squareDigit(765));//493625
+        //////////////////
+        console.log("_".repeat(20)+"two"+"_".repeat(20));
+        function squareDigits(num) {
+            let y=num.toString().split("").map((e)=>{
+              return e*e
+            }).join("")
+            return Number(y)
+        }
+        console.log(squareDigits(9119));//811181
+        console.log(squareDigits(765));//493625
+        /////////////
+        console.log("_".repeat(20)+"three"+"_".repeat(20));
+        function squareDigit3(num) {
+            let numNew =num.toString().split("")
+        let fin=numNew.map((e)=>{
+         return Math.pow(e,2)
+        })
+        return Number(fin.join(""))
+    }
+    
+        console.log(squareDigit3(9119));//811181
+        console.log(squareDigit3(765));//493625
+    </script>
+</body>
+
+</html>
