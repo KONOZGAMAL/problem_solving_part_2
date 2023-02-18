@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Filtering</title>
+</head>
+
+<body>
+    <p>
+        In this kata you will create a function that takes a list of non-negative integers and strings and returns a new
+        list with the strings filtered out.
+
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function filter_list1(l) {
+            return l.filter((e) => typeof (e) == "number")
+        }
+        console.log(filter_list1([1, 'a', 'b', 0, 15]));
+        console.log(filter_list1([1, 2, 'aasf', '1', '123', 123]));
+        ////////////////////////////
+        console.log("_".repeat(20) + "two" + "_".repeat(20));
+        function filter_list2(l) {
+            return l.filter((el) => Number.isFinite(el))
+        }
+        console.log(filter_list2([1, 'a', 'b', 0, 15]));
+        console.log(filter_list2([1, 2, 'aasf', '1', '123', 123]));
+        ////////////////////////
+        console.log("_".repeat(20) + "three" + "_".repeat(20));
+        function filter_list(l) {
+            let err = []
+            for (let i = 0; i < l.length; i++) {
+                if (typeof (l[i]) == "number") {
+                    err.push(l[i])
+                }
+            }
+            return err
+        }
+        console.log(filter_list([1, 'a', 'b', 0, 15]));
+        console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
+    </script>
+</body>
+
+</html>

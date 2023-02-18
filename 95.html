@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exes and Ohs </title>
+</head>
+
+<body>
+    <p>
+        Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case
+        insensitive.
+        The string can contain any char.
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function XO(str) {
+            str = str.toLowerCase();
+            let arr = str.split("")
+            let Oarr = 0
+            let Xarr = 0
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == "o") {
+                    Oarr += 1
+                } else if (arr[i] == "x") {
+
+                    Xarr += 1
+                }
+            }
+            if (Oarr == Xarr) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+       
+            console.log(XO("ooxx"));//true
+            console.log(XO("ooom"));//false
+
+            console.log("_".repeat(20) + "two" + "_".repeat(20));
+            function XO1(str) {
+                let RegO = /o/ig
+                let RegX = /x/ig
+                return str.match(RegO)?.length == str.match(RegX)?.length
+
+
+            }
+            console.log(XO1("ooxx"));//true
+            console.log(XO1("ooom"));//false
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mumbling</title>
+</head>
+
+<body>
+    <p>
+        This time no story, no theory. The examples below show you how to write function accum:
+    </p>
+    <script>
+        console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function accum(s) {
+            let arr = s.toUpperCase().split("")
+            let a = arr.reduce((e, c, index) => {
+                return e + "-" + c + c.toLowerCase().repeat((index))
+            })
+            return a
+        }
+        console.log(accum("cwAt"));//C-Ww-Aaa-Tttt
+        console.log(accum("RqaEzty"));//C-Ww-Aaa-Tttt
+        //////////////////////////////////////////////////////////
+        console.log("_".repeat(20) + "two" + "_".repeat(20));
+
+        function accum2(s) {
+            let str = s.split("").map((e, index) => {
+                return e.toUpperCase() + e.repeat(index).toLowerCase()
+            })
+            return str.join("-")
+        }
+        console.log(accum2("cwAt"));//C-Ww-Aaa-Tttt
+        console.log(accum2("RqaEzty"));//C-Ww-Aaa-Tttt
+     
+    </script>
+</body>
+
+</html>
