@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Twins: 1. Types </title>
+</head>
+
+<body>
+    <p>
+        This kata series was created for friends of mine who just started to learn programming.
+        Wish you all the best and keep your mind open and sharp!
+        Task:
+        Write a function that will accept two parameters:
+        variable and type and check if type of variable is matching type.
+        Return true if types match or false if not.
+    </p>
+    <script>
+         console.log("_".repeat(20) + "one" + "_".repeat(20));
+        function typeValidation1(variable, type) {
+            return typeof variable == type;
+        }
+        console.log(typeValidation1(10, 'number'));
+        console.log(typeValidation1("10", 'number'));
+        ////////////
+        console.log("_".repeat(20) + "two" + "_".repeat(20));
+        function typeValidation(variable, type) {
+          if (typeof(variable)==="number"&& type ==="number") {
+            return true
+          }else if(typeof(variable)==="string"&&type ==="string"){
+            return true
+          }else if(typeof(variable)==="boolean" &&type ==="boolean"){
+            return true
+
+          }else if(typeof(variable)==="object" &&type ==="object"){
+            return true
+
+          }else if(typeof(variable)==="undefined" &&type ==="undefined"){
+
+          }
+          else{
+            return false
+          }
+        }
+        console.log(typeValidation(10, 'number'));
+        console.log(typeValidation("10", 'number'));
+    </script>
+</body>
+
+</html>
